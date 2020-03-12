@@ -6,7 +6,7 @@ Web Science Twitter Crawler
 get_tweet_data.py
 ================
 
-This script uses lists 'keywords' and 'users' to filter a stream of twitter data and insert the raw tweet json into a mongoDB collection TwitterStream.all_tweets
+This script uses lists 'keywords' and 'users' to filter a stream of twitter data and insert the raw tweet json into a mongoDB collection TwitterStream.all_tweets. To use this script your twitter api access keys must be contained in a file keys.txt. Each key must be placed on a newline with no extra characters in the order consumer_key > consumer_secret > access_token and access_token_secret with consumer_key being on the top line and access_token_secret being on the bottom line.
 
 cluster_text.py
 ================
@@ -25,3 +25,7 @@ This is the most complex of the three and uses the networkx and matplot librarie
 get_hashtags.py
 ================
 This script is used to get the hashtag information from the 'TwitterStream.all_tweets' collection in format that is readable by https://www.cortext.net to produce graphs for the hashtag data.
+
+Sample Data
+================
+Sample data is provided in the all_tweets.json file and must be imported into a local mongoDB database TwitterStream and collection all_tweets for the scripts of function correctly. Alternately new data can be collected by the get_twitter_data.py script.

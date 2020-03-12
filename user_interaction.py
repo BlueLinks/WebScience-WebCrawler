@@ -60,11 +60,11 @@ def get_interactions(row):
     interactions = set()
 
     # Add Mentions
-    # interactions.add((row["user_mentions_id"], row["user_mentions_screen_name"]))
+    interactions.add((row["user_mentions_id"], row["user_mentions_screen_name"]))
     # Add Retweets
-    # interactions.add((row["retweeted_id"], row["retweeted_screen_name"]))
+    interactions.add((row["retweeted_id"], row["retweeted_screen_name"]))
     # Add replies
-    # interactions.add((row["in_reply_to_user_id"], row["in_reply_to_screen_name"]))
+    interactions.add((row["in_reply_to_user_id"], row["in_reply_to_screen_name"]))
     # Add quotes
     interactions.add((row["quoted_id"], row["quoted_screen_name"]))
 
